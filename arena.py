@@ -61,13 +61,13 @@ class Arena(metaclass=BaseSingleton):
         return result
 
     def hero_hit(self):
-        result = f"{self.hero.hit(target=self.enemy)}" \
-                 f"{self.next_turn()}"
+        result = f'{self.hero.hit(target=self.enemy)}\n' \
+                 f'{self.next_turn()}'
 
         return result
 
     def hero_use_skill(self):
-        result = f"{self.hero.use_skill(target=self.enemy)}" \
-                 f"{self.next_turn()}"
+        result = f'{self.hero.use_skill(target=self.enemy)}\n' \
+                 f'{self.next_turn()}'
 
         return result
