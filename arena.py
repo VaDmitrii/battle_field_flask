@@ -9,7 +9,7 @@ class BaseSingleton(type):
 
 
 class Arena(metaclass=BaseSingleton):
-    STAMINA_PER_ROUND = 1
+    STAMINA_PER_ROUND = 3
     hero = None
     enemy = None
     game_is_running = False
@@ -33,8 +33,8 @@ class Arena(metaclass=BaseSingleton):
         return result
 
     def _stamina_regeneration(self):
-        hero_add_stamina = 1 * self.hero.unit_class.stamina
-        enemy_add_stamina = 1 * self.enemy.unit_class.stamina
+        hero_add_stamina = self.STAMINA_PER_ROUND * self.hero.unit_class.stamina
+        enemy_add_stamina = self.STAMINA_PER_ROUND * self.enemy.unit_class.stamina
 
         if self.hero.stamina + hero_add_stamina < self.hero.unit_class.max_stamina:
             self.hero.stamina += hero_add_stamina
