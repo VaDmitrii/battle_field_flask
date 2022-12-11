@@ -109,7 +109,7 @@ class EnemyUnit(BaseUnit):
         """
         Функция нанесения удара противником
         """
-        if randint(0, 100) <= 10:
+        if randint(0, 100) <= 10 and not self._is_skill_used:
             self.use_skill(target=target)
         else:
             if self.stamina_points < self.weapon.stamina_per_hit:
