@@ -1,3 +1,1 @@
-# coursework_5
-
-# Игра "Битва титанов"
+# "Battle back to 90s" game 
